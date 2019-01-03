@@ -16,7 +16,7 @@ static void Clk_init(void)//16M HSI
 static void Gpio_init(void)//PD4:POW_EN PA3:HearBeat 
 {
     GPIO_DeInit(GPIOD);
-    GPIO_Init(GPIOD, GPIO_PIN_4, GPIO_MODE_OUT_PP_HIGH_FAST);
+    GPIO_Init(GPIOD, GPIO_PIN_4, GPIO_MODE_OUT_PP_LOW_FAST);
     GPIO_DeInit(GPIOA);
     GPIO_Init(GPIOA, GPIO_PIN_3, GPIO_MODE_IN_FL_IT);
     EXTI_DeInit();
@@ -78,35 +78,7 @@ unsigned char Rxpacker[10];      //全局变量    完整数据包
 unsigned char length;           //数据长度
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
-    unsigned char RxBuf;//临时接收
-    static unsigned char RxData[255];//接收数据缓存区
-    static unsigned char count;//串口接收数据长度  
-    static unsigned char rec;//判断是否正在接收数据
-    UART1_ClearITPendingBit(UART1_IT_RXNE);
-    RxBuf = UART1_ReceiveData8();
-    if(RxBuf == (0xF0))//帧头
-    {
-        rec= 1;
-        count = 0;
-        flagpacker = 0;
-        return ;  
-    }
-    if(RxBuf  == (0xF1))//帧尾
-    {
-        rec= 0;
-        //此处可以添加校验码
-        length = count;
-        for(unsigned char i = 0; i<count;i++)
-        {
-            Rxpacker[i] =RxData[i];
-        }
-        flagpacker = 1;//已接收一个完整的数据包
-        return ;
-    }
-    if(rec)//判断是否处于接收状态  
-    {
-        RxData[count++] = RxBuf;
-    }
+    bHeartBeatFlag = 1;
 }
 
 unsigned char bHeartBeatFlag = 0;

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V2.20.1.176 for STM8                     02/Jan/2019  09:43:50
+# IAR ELF Linker V2.20.1.176 for STM8                     02/Jan/2019  16:24:59
 # Copyright 2010-2015 IAR Systems AB.
 #
 #    Output file  =  
@@ -69,20 +69,14 @@ __rt_version               = 4
   .vregs           uninit   0x000000   0x10  vregs.o [4]
                           - 0x000010   0x10
 
-"P2":                                 0x115
-  .near.bss        zero     0x000010   0xff  sys.o [1]
-  .near.bss        zero     0x00010f    0xa  sys.o [1]
-  .near.bss        zero     0x000119    0x2  sys.o [1]
-  .near.bss        zero     0x00011b    0x2  sys.o [1]
-  .near.bss        zero     0x00011d    0x1  sys.o [1]
-  .near.bss        zero     0x00011e    0x1  sys.o [1]
-  .near.bss        zero     0x00011f    0x1  sys.o [1]
-  .near.bss        zero     0x000120    0x1  sys.o [1]
-  .near.bss        zero     0x000121    0x1  sys.o [1]
-  .near.bss        zero     0x000122    0x1  sys.o [1]
-  .near.bss        zero     0x000123    0x1  sys.o [1]
-  .near.bss        zero     0x000124    0x1  sys.o [1]
-                          - 0x000125  0x115
+"P2":                                   0x8
+  .near.bss        zero     0x000010    0x2  sys.o [1]
+  .near.bss        zero     0x000012    0x2  sys.o [1]
+  .near.bss        zero     0x000014    0x1  sys.o [1]
+  .near.bss        zero     0x000015    0x1  sys.o [1]
+  .near.bss        zero     0x000016    0x1  sys.o [1]
+  .near.bss        zero     0x000017    0x1  sys.o [1]
+                          - 0x000018    0x8
 
 "A2":                                 0x100
   CSTACK                    0x000300  0x100  <Block>
@@ -94,69 +88,67 @@ __rt_version               = 4
     .intvec        const    0x008000   0x80  interrupt.o [4]
                           - 0x008080   0x80
 
-"P3":                                 0xe10
+"P3":                                 0xd39
   .near_func.text  ro code  0x008080  0x226  stm8s_uart1.o [1]
   .near_func.text  ro code  0x0082a6  0x12b  long.o [4]
   .near_func.text  ro code  0x0083d1  0x114  stm8s_gpio.o [1]
-  .near_func.text  ro code  0x0084e5   0xf2  vreg_util.o [4]
-  .near_func.text  ro code  0x0085d7   0xd1  stm8s_exti.o [1]
-  .near_func.text  ro code  0x0086a8   0xd0  stm8s_uart1.o [1]
-  .near_func.text  ro code  0x008778   0x82  sys.o [1]
-  .near_func.text  ro code  0x0087fa   0x57  stm8s_clk.o [1]
-  .near_func.text  ro code  0x008851   0x51  stm8s_tim4.o [1]
-  .near_func.text  ro code  0x0088a2   0x50  stm8s_tim4.o [1]
-  .near.rodata     const    0x0088f2   0x4a  stm8s_uart1.o [1]
-  .near.rodata     const    0x00893c   0x49  stm8s_exti.o [1]
-  .near.rodata     const    0x008985   0x49  stm8s_gpio.o [1]
-  .near.rodata     const    0x0089ce   0x49  stm8s_iwdg.o [1]
-  .near.rodata     const    0x008a17   0x49  stm8s_tim4.o [1]
-  .near.rodata     const    0x008a60   0x48  stm8s_clk.o [1]
-  .near_func.text  ro code  0x008aa8   0x47  long_util.o [4]
-  .near_func.text  ro code  0x008aef   0x44  stm8s_iwdg.o [1]
-  .near_func.text  ro code  0x008b33   0x38  sys.o [1]
-  .near_func.text  ro code  0x008b6b   0x36  stm8s_clk.o [1]
-  .near_func.text  ro code  0x008ba1   0x36  stm8s_uart1.o [1]
-  .near_func.text  ro code  0x008bd7   0x2f  stm8s_clk.o [1]
-  .near_func.text  ro code  0x008c06   0x2f  stm8s_tim4.o [1]
-  .near_func.text  ro code  0x008c35   0x2f  sys.o [1]
-  .near_func.text  ro code  0x008c64   0x2e  main.o [1]
-  .near_func.text  ro code  0x008c92   0x2d  stm8s_uart1.o [1]
-  .near_func.text  ro code  0x008cbf   0x28  sys.o [1]
-  .near_func.text  ro code  0x008ce7   0x26  stm8s_iwdg.o [1]
-  .near_func.text  ro code  0x008d0d   0x25  dc_util.o [4]
-  .iar.init_table  const    0x008d32    0x8  - Linker created -
-  .near_func.text  ro code  0x008d3a   0x1e  init_small.o [4]
-  .near_func.text  ro code  0x008d58   0x1b  stm8s_gpio.o [1]
-  .near_func.text  ro code  0x008d73   0x1a  sys.o [1]
-  .near_func.text  ro code  0x008d8d   0x19  stm8s_tim4.o [1]
-  .near_func.text  ro code  0x008da6   0x17  init.o [4]
-  .near_func.text  ro code  0x008dbd   0x15  sys.o [1]
-  .near_func.text  ro code  0x008dd2   0x14  __dbg_xxexit.o [3]
-  .near_func.text  ro code  0x008de6   0x13  cstartup.o [4]
-  .near_func.text  ro code  0x008df9   0x12  sys.o [1]
-  .near_func.text  ro code  0x008e0b    0xd  stm8s_uart1.o [1]
-  .near_func.text  ro code  0x008e18    0xd  sys.o [1]
-  .near_func.text  ro code  0x008e25    0xd  sys.o [1]
-  .near_func.text  ro code  0x008e32    0xd  short.o [4]
-  .near_func.text  ro code  0x008e3f    0x9  stm8s_exti.o [1]
-  .near_func.text  ro code  0x008e48    0x8  sys.o [1]
-  .near_func.text  ro code  0x008e50    0x7  stm8s_gpio.o [1]
-  .near_func.text  ro code  0x008e57    0x6  char.o [4]
-  .near_func.text  ro code  0x008e5d    0x5  stm8s_iwdg.o [1]
-  .near_func.text  ro code  0x008e62    0x5  stm8s_iwdg.o [1]
-  .near_func.text  ro code  0x008e67    0x5  sys.o [1]
-  .near_func.text  ro code  0x008e6c    0x5  cexit.o [4]
-  .near.rodata     const    0x008e71    0x4  stm8s_clk.o [1]
-  .near_func.text  ro code  0x008e75    0x4  stm8s_gpio.o [1]
-  .near_func.text  ro code  0x008e79    0x4  stm8s_iwdg.o [1]
-  .near_func.text  ro code  0x008e7d    0x4  stm8s_uart1.o [1]
-  .near_func.text  ro code  0x008e81    0x3  interrupt.o [4]
-  .near_func.text  ro code  0x008e84    0x3  low_level_init.o [4]
-  .near_func.text  ro code  0x008e87    0x3  exit.o [4]
-  .near_func.text  ro code  0x008e8a    0x3  unhandled_exception.o [4]
-  .near_func.text  ro code  0x008e8d    0x2  main.o [1]
-  .near_func.text  ro code  0x008e8f    0x1  __dbg_break.o [3]
-                          - 0x008e90  0xe10
+  .near_func.text  ro code  0x0084e5   0xd2  vreg_util.o [4]
+  .near_func.text  ro code  0x0085b7   0xd1  stm8s_exti.o [1]
+  .near_func.text  ro code  0x008688   0xd0  stm8s_uart1.o [1]
+  .near_func.text  ro code  0x008758   0x57  stm8s_clk.o [1]
+  .near_func.text  ro code  0x0087af   0x51  stm8s_tim4.o [1]
+  .near_func.text  ro code  0x008800   0x50  stm8s_tim4.o [1]
+  .near.rodata     const    0x008850   0x4a  stm8s_uart1.o [1]
+  .near.rodata     const    0x00889a   0x49  stm8s_exti.o [1]
+  .near.rodata     const    0x0088e3   0x49  stm8s_gpio.o [1]
+  .near.rodata     const    0x00892c   0x49  stm8s_iwdg.o [1]
+  .near.rodata     const    0x008975   0x49  stm8s_tim4.o [1]
+  .near.rodata     const    0x0089be   0x48  stm8s_clk.o [1]
+  .near_func.text  ro code  0x008a06   0x47  long_util.o [4]
+  .near_func.text  ro code  0x008a4d   0x44  stm8s_iwdg.o [1]
+  .near_func.text  ro code  0x008a91   0x38  sys.o [1]
+  .near_func.text  ro code  0x008ac9   0x36  stm8s_clk.o [1]
+  .near_func.text  ro code  0x008aff   0x2f  stm8s_clk.o [1]
+  .near_func.text  ro code  0x008b2e   0x2f  stm8s_tim4.o [1]
+  .near_func.text  ro code  0x008b5d   0x2f  sys.o [1]
+  .near_func.text  ro code  0x008b8c   0x2e  main.o [1]
+  .near_func.text  ro code  0x008bba   0x2d  stm8s_uart1.o [1]
+  .near_func.text  ro code  0x008be7   0x28  sys.o [1]
+  .near_func.text  ro code  0x008c0f   0x26  stm8s_iwdg.o [1]
+  .near_func.text  ro code  0x008c35   0x25  dc_util.o [4]
+  .iar.init_table  const    0x008c5a    0x8  - Linker created -
+  .near_func.text  ro code  0x008c62   0x1e  init_small.o [4]
+  .near_func.text  ro code  0x008c80   0x1b  stm8s_gpio.o [1]
+  .near_func.text  ro code  0x008c9b   0x1a  sys.o [1]
+  .near_func.text  ro code  0x008cb5   0x19  stm8s_tim4.o [1]
+  .near_func.text  ro code  0x008cce   0x17  init.o [4]
+  .near_func.text  ro code  0x008ce5   0x15  sys.o [1]
+  .near_func.text  ro code  0x008cfa   0x14  __dbg_xxexit.o [3]
+  .near_func.text  ro code  0x008d0e   0x13  cstartup.o [4]
+  .near_func.text  ro code  0x008d21   0x12  sys.o [1]
+  .near_func.text  ro code  0x008d33    0xd  stm8s_uart1.o [1]
+  .near_func.text  ro code  0x008d40    0xd  sys.o [1]
+  .near_func.text  ro code  0x008d4d    0xd  sys.o [1]
+  .near_func.text  ro code  0x008d5a    0xd  short.o [4]
+  .near_func.text  ro code  0x008d67    0x9  stm8s_exti.o [1]
+  .near_func.text  ro code  0x008d70    0x8  sys.o [1]
+  .near_func.text  ro code  0x008d78    0x7  stm8s_gpio.o [1]
+  .near_func.text  ro code  0x008d7f    0x6  char.o [4]
+  .near_func.text  ro code  0x008d85    0x5  stm8s_iwdg.o [1]
+  .near_func.text  ro code  0x008d8a    0x5  stm8s_iwdg.o [1]
+  .near_func.text  ro code  0x008d8f    0x5  sys.o [1]
+  .near_func.text  ro code  0x008d94    0x5  sys.o [1]
+  .near_func.text  ro code  0x008d99    0x5  cexit.o [4]
+  .near.rodata     const    0x008d9e    0x4  stm8s_clk.o [1]
+  .near_func.text  ro code  0x008da2    0x4  stm8s_gpio.o [1]
+  .near_func.text  ro code  0x008da6    0x4  stm8s_iwdg.o [1]
+  .near_func.text  ro code  0x008daa    0x3  interrupt.o [4]
+  .near_func.text  ro code  0x008dad    0x3  low_level_init.o [4]
+  .near_func.text  ro code  0x008db0    0x3  exit.o [4]
+  .near_func.text  ro code  0x008db3    0x3  unhandled_exception.o [4]
+  .near_func.text  ro code  0x008db6    0x2  main.o [1]
+  .near_func.text  ro code  0x008db8    0x1  __dbg_break.o [3]
+                          - 0x008db9  0xd39
 
 
 *******************************************************************************
@@ -166,8 +158,8 @@ __rt_version               = 4
           Address   Size
           -------   ----
 Zero (__iar_zero_init2)
-    1 destination range, total size 0x115:
-          0x000010  0x115
+    1 destination range, total size 0x8:
+          0x000010   0x8
 
 
 
@@ -184,10 +176,10 @@ F:\ÈÙÌ©½¡¿µ\ÍøÂç°å\ÓÐ·½\N720_WDG\project\Debug\Obj: [1]
     stm8s_gpio.o               314       73
     stm8s_iwdg.o               120       73
     stm8s_tim4.o               233       73
-    stm8s_uart1.o              874       74
-    sys.o                      377               277
+    stm8s_uart1.o              816       74
+    sys.o                      252                 8
     ------------------------------------------------
-    Total:                   2 372      442      277
+    Total:                   2 189      442        8
 
 command line: [2]
     ------------------------------------------------
@@ -213,14 +205,14 @@ dlstm8smn.a: [4]
     low_level_init.o             3
     short.o                     13
     unhandled_exception.o        3
-    vreg_util.o                242
+    vreg_util.o                210
     vregs.o                                       16
     ------------------------------------------------
-    Total:                     757      128       16
+    Total:                     725      128       16
 
     Linker created                        8      256
 ----------------------------------------------------
-    Grand Total:             3 150      578      549
+    Grand Total:             2 935      578      280
 
 
 *******************************************************************************
@@ -229,8 +221,8 @@ dlstm8smn.a: [4]
 
 Entry                    Address   Size  Type      Object
 -----                    -------   ----  ----      ------
-.iar.init_table$$Base   0x008d32          --   Gb  - Linker created -
-.iar.init_table$$Limit  0x008d3a          --   Gb  - Linker created -
+.iar.init_table$$Base   0x008c5a          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x008c62          --   Gb  - Linker created -
 ?b0                     0x000000         Data  Gb  vregs.o [4]
 ?b1                     0x000001         Data  Gb  vregs.o [4]
 ?b10                    0x00000a         Data  Gb  vregs.o [4]
@@ -247,69 +239,65 @@ Entry                    Address   Size  Type      Object
 ?b7                     0x000007         Data  Gb  vregs.o [4]
 ?b8                     0x000008         Data  Gb  vregs.o [4]
 ?b9                     0x000009         Data  Gb  vregs.o [4]
-?dc32_l0                0x008d0d         Code  Gb  dc_util.o [4]
-?dc32_l1                0x008d1a         Code  Gb  dc_util.o [4]
-?dc32_px                0x008d27         Code  Gb  dc_util.o [4]
+?dc32_l0                0x008c35         Code  Gb  dc_util.o [4]
+?dc32_l1                0x008c42         Code  Gb  dc_util.o [4]
+?dc32_px                0x008c4f         Code  Gb  dc_util.o [4]
 ?e0                     0x000001         Data  Gb  vregs.o [4]
 ?e1                     0x000005         Data  Gb  vregs.o [4]
 ?e2                     0x000009         Data  Gb  vregs.o [4]
 ?e3                     0x00000d         Data  Gb  vregs.o [4]
-?epilogue_l2            0x008574         Code  Gb  vreg_util.o [4]
-?epilogue_l2_l3         0x008571         Code  Gb  vreg_util.o [4]
-?epilogue_w4            0x008578         Code  Gb  vreg_util.o [4]
+?epilogue_l2            0x008554         Code  Gb  vreg_util.o [4]
+?epilogue_l2_l3         0x008551         Code  Gb  vreg_util.o [4]
+?epilogue_w4            0x008558         Code  Gb  vreg_util.o [4]
 ?l0                     0x000000         Data  Gb  vregs.o [4]
 ?l1                     0x000004         Data  Gb  vregs.o [4]
 ?l2                     0x000008         Data  Gb  vregs.o [4]
 ?l3                     0x00000c         Data  Gb  vregs.o [4]
-?load32_0x_l0           0x008ae1         Code  Gb  long_util.o [4]
-?load32_asp_l0          0x008ad5         Code  Gb  long_util.o [4]
-?load32_dbsp_l0         0x008ad0         Code  Gb  long_util.o [4]
-?load32_l0_0x           0x008ab8         Code  Gb  long_util.o [4]
-?load32_l0_asp          0x008aad         Code  Gb  long_util.o [4]
-?load32_l0_dbsp         0x008aa8         Code  Gb  long_util.o [4]
-?load32_l0_xsp          0x008aaf         Code  Gb  long_util.o [4]
-?load32_l1_0x           0x008ac4         Code  Gb  long_util.o [4]
-?load32_xsp_l0          0x008ad7         Code  Gb  long_util.o [4]
-?mov_e0_e2              0x00857f         Code  Gb  vreg_util.o [4]
-?mov_e0_e3              0x00858c         Code  Gb  vreg_util.o [4]
-?mov_e1_e0              0x008599         Code  Gb  vreg_util.o [4]
-?mov_e1_e2              0x0085a6         Code  Gb  vreg_util.o [4]
-?mov_e1_e3              0x0085b3         Code  Gb  vreg_util.o [4]
-?mov_e2_e0              0x0085c0         Code  Gb  vreg_util.o [4]
-?mov_e3_e0              0x0085cd         Code  Gb  vreg_util.o [4]
-?mov_l0_l2              0x00857c         Code  Gb  vreg_util.o [4]
-?mov_l0_l3              0x008589         Code  Gb  vreg_util.o [4]
-?mov_l1_l0              0x008596         Code  Gb  vreg_util.o [4]
-?mov_l1_l2              0x0085a3         Code  Gb  vreg_util.o [4]
-?mov_l1_l3              0x0085b0         Code  Gb  vreg_util.o [4]
-?mov_l2_l0              0x0085bd         Code  Gb  vreg_util.o [4]
-?mov_l3_l0              0x0085ca         Code  Gb  vreg_util.o [4]
-?mov_w1_w5              0x008582         Code  Gb  vreg_util.o [4]
-?mov_w1_w7              0x00858f         Code  Gb  vreg_util.o [4]
-?mov_w3_w1              0x00859c         Code  Gb  vreg_util.o [4]
-?mov_w3_w5              0x0085a9         Code  Gb  vreg_util.o [4]
-?mov_w3_w7              0x0085b6         Code  Gb  vreg_util.o [4]
-?mov_w5_w1              0x0085c3         Code  Gb  vreg_util.o [4]
-?mov_w7_w1              0x0085d0         Code  Gb  vreg_util.o [4]
+?load32_0x_l0           0x008a3f         Code  Gb  long_util.o [4]
+?load32_asp_l0          0x008a33         Code  Gb  long_util.o [4]
+?load32_dbsp_l0         0x008a2e         Code  Gb  long_util.o [4]
+?load32_l0_0x           0x008a16         Code  Gb  long_util.o [4]
+?load32_l0_asp          0x008a0b         Code  Gb  long_util.o [4]
+?load32_l0_dbsp         0x008a06         Code  Gb  long_util.o [4]
+?load32_l0_xsp          0x008a0d         Code  Gb  long_util.o [4]
+?load32_l1_0x           0x008a22         Code  Gb  long_util.o [4]
+?load32_xsp_l0          0x008a35         Code  Gb  long_util.o [4]
+?mov_e0_e2              0x00855f         Code  Gb  vreg_util.o [4]
+?mov_e0_e3              0x00856c         Code  Gb  vreg_util.o [4]
+?mov_e1_e0              0x008579         Code  Gb  vreg_util.o [4]
+?mov_e1_e2              0x008586         Code  Gb  vreg_util.o [4]
+?mov_e1_e3              0x008593         Code  Gb  vreg_util.o [4]
+?mov_e2_e0              0x0085a0         Code  Gb  vreg_util.o [4]
+?mov_e3_e0              0x0085ad         Code  Gb  vreg_util.o [4]
+?mov_l0_l2              0x00855c         Code  Gb  vreg_util.o [4]
+?mov_l0_l3              0x008569         Code  Gb  vreg_util.o [4]
+?mov_l1_l0              0x008576         Code  Gb  vreg_util.o [4]
+?mov_l1_l2              0x008583         Code  Gb  vreg_util.o [4]
+?mov_l1_l3              0x008590         Code  Gb  vreg_util.o [4]
+?mov_l2_l0              0x00859d         Code  Gb  vreg_util.o [4]
+?mov_l3_l0              0x0085aa         Code  Gb  vreg_util.o [4]
+?mov_w1_w5              0x008562         Code  Gb  vreg_util.o [4]
+?mov_w1_w7              0x00856f         Code  Gb  vreg_util.o [4]
+?mov_w3_w1              0x00857c         Code  Gb  vreg_util.o [4]
+?mov_w3_w5              0x008589         Code  Gb  vreg_util.o [4]
+?mov_w3_w7              0x008596         Code  Gb  vreg_util.o [4]
+?mov_w5_w1              0x0085a3         Code  Gb  vreg_util.o [4]
+?mov_w7_w1              0x0085b0         Code  Gb  vreg_util.o [4]
 ?mul32_l0_l0_0x         0x0082c4         Code  Gb  long.o [4]
 ?mul32_l0_l0_dl         0x0082c1         Code  Gb  long.o [4]
 ?mul32_l0_l0_l1         0x0082cd         Code  Gb  long.o [4]
-?pop_l0                 0x00853d         Code  Gb  vreg_util.o [4]
-?pop_l1                 0x008548         Code  Gb  vreg_util.o [4]
-?pop_l2                 0x008553         Code  Gb  vreg_util.o [4]
-?pop_l3                 0x00855e         Code  Gb  vreg_util.o [4]
+?pop_l2                 0x008533         Code  Gb  vreg_util.o [4]
+?pop_l3                 0x00853e         Code  Gb  vreg_util.o [4]
 ?pop_w4                 0x0084fd         Code  Gb  vreg_util.o [4]
-?push_l0                0x00850c         Code  Gb  vreg_util.o [4]
-?push_l1                0x008511         Code  Gb  vreg_util.o [4]
-?push_l2                0x008516         Code  Gb  vreg_util.o [4]
-?push_l3                0x00851b         Code  Gb  vreg_util.o [4]
+?push_l2                0x00850c         Code  Gb  vreg_util.o [4]
+?push_l3                0x008511         Code  Gb  vreg_util.o [4]
 ?push_w4                0x0084e5         Code  Gb  vreg_util.o [4]
-?sll16_x_x_a            0x008e32         Code  Gb  short.o [4]
+?sll16_x_x_a            0x008d5a         Code  Gb  short.o [4]
 ?sll32_0x_0x_a          0x0083c3         Code  Gb  long.o [4]
 ?sll32_l0_l0_a          0x0083c0         Code  Gb  long.o [4]
-?sll8_a_a_5             0x008e58         Code  Gb  char.o [4]
-?sll8_a_a_6             0x008e57         Code  Gb  char.o [4]
-?srl16_x_x_4            0x008e3a         Code  Gb  short.o [4]
+?sll8_a_a_5             0x008d80         Code  Gb  char.o [4]
+?sll8_a_a_6             0x008d7f         Code  Gb  char.o [4]
+?srl16_x_x_4            0x008d62         Code  Gb  short.o [4]
 ?sub32_l0_l0_0x         0x0082a9         Code  Gb  long.o [4]
 ?sub32_l0_l0_l1         0x0082a6         Code  Gb  long.o [4]
 ?udiv32_l0_dl_l1        0x00834b         Code  Gb  long.o [4]
@@ -324,74 +312,68 @@ Entry                    Address   Size  Type      Object
 ?w5                     0x00000a         Data  Gb  vregs.o [4]
 ?w6                     0x00000c         Data  Gb  vregs.o [4]
 ?w7                     0x00000e         Data  Gb  vregs.o [4]
-CLK_DeInit              0x008b6b   0x36  Code  Gb  stm8s_clk.o [1]
-CLK_GetClockFreq        0x0087fa   0x57  Code  Gb  stm8s_clk.o [1]
-CLK_HSICmd              0x008bd7   0x2f  Code  Gb  stm8s_clk.o [1]
+CLK_DeInit              0x008ac9   0x36  Code  Gb  stm8s_clk.o [1]
+CLK_GetClockFreq        0x008758   0x57  Code  Gb  stm8s_clk.o [1]
+CLK_HSICmd              0x008aff   0x2f  Code  Gb  stm8s_clk.o [1]
 CSTACK$$Base            0x000300          --   Gb  - Linker created -
 CSTACK$$Limit           0x000400          --   Gb  - Linker created -
-Clk_init                0x008e48    0x8  Code  Lc  sys.o [1]
-EXTI_DeInit             0x008e3f    0x9  Code  Gb  stm8s_exti.o [1]
-EXTI_PORTA_IRQHandler   0x008e67    0x5  Code  Gb  sys.o [1]
+Clk_init                0x008d70    0x8  Code  Lc  sys.o [1]
+EXTI_DeInit             0x008d67    0x9  Code  Gb  stm8s_exti.o [1]
+EXTI_PORTA_IRQHandler   0x008d94    0x5  Code  Gb  sys.o [1]
 EXTI_SetExtIntSensitivity
-                        0x0085d7   0xd1  Code  Gb  stm8s_exti.o [1]
-GPIO_DeInit             0x008d58   0x1b  Code  Gb  stm8s_gpio.o [1]
+                        0x0085b7   0xd1  Code  Gb  stm8s_exti.o [1]
+GPIO_DeInit             0x008c80   0x1b  Code  Gb  stm8s_gpio.o [1]
 GPIO_Init               0x0083d1  0x114  Code  Gb  stm8s_gpio.o [1]
-GPIO_WriteHigh          0x008e50    0x7  Code  Gb  stm8s_gpio.o [1]
-GPIO_WriteLow           0x008e75    0x4  Code  Gb  stm8s_gpio.o [1]
-Gpio_init               0x008c35   0x2f  Code  Lc  sys.o [1]
-HSIDivFactor            0x008e71    0x4  Data  Gb  stm8s_clk.o [1]
+GPIO_WriteHigh          0x008d78    0x7  Code  Gb  stm8s_gpio.o [1]
+GPIO_WriteLow           0x008da2    0x4  Code  Gb  stm8s_gpio.o [1]
+Gpio_init               0x008b5d   0x2f  Code  Lc  sys.o [1]
+HSIDivFactor            0x008d9e    0x4  Data  Gb  stm8s_clk.o [1]
 INTVEC$$Base            0x008000          --   Gb  - Linker created -
 INTVEC$$Limit           0x008080          --   Gb  - Linker created -
-IWDG_Enable             0x008e62    0x5  Code  Gb  stm8s_iwdg.o [1]
-IWDG_ReloadCounter      0x008e5d    0x5  Code  Gb  stm8s_iwdg.o [1]
-IWDG_SetPrescaler       0x008aef   0x44  Code  Gb  stm8s_iwdg.o [1]
-IWDG_SetReload          0x008e79    0x4  Code  Gb  stm8s_iwdg.o [1]
-IWDG_WriteAccessCmd     0x008ce7   0x26  Code  Gb  stm8s_iwdg.o [1]
-IWDG_init               0x008dbd   0x15  Code  Lc  sys.o [1]
-N720_PwrDown            0x008e25    0xd  Code  Gb  sys.o [1]
-N720_PwrOn              0x008e18    0xd  Code  Gb  sys.o [1]
-Region$$Table$$Base     0x008d32          --   Gb  - Linker created -
-Region$$Table$$Limit    0x008d3a          --   Gb  - Linker created -
-Rxpacker                0x00010f    0xa  Data  Gb  sys.o [1]
-Sys_init                0x008df9   0x12  Code  Gb  sys.o [1]
-TIM4_Cmd                0x008c06   0x2f  Code  Gb  stm8s_tim4.o [1]
-TIM4_DeInit             0x008d8d   0x19  Code  Gb  stm8s_tim4.o [1]
-TIM4_ITConfig           0x0088a2   0x50  Code  Gb  stm8s_tim4.o [1]
-TIM4_TimeBaseInit       0x008851   0x51  Code  Gb  stm8s_tim4.o [1]
+IWDG_Enable             0x008d8a    0x5  Code  Gb  stm8s_iwdg.o [1]
+IWDG_ReloadCounter      0x008d85    0x5  Code  Gb  stm8s_iwdg.o [1]
+IWDG_SetPrescaler       0x008a4d   0x44  Code  Gb  stm8s_iwdg.o [1]
+IWDG_SetReload          0x008da6    0x4  Code  Gb  stm8s_iwdg.o [1]
+IWDG_WriteAccessCmd     0x008c0f   0x26  Code  Gb  stm8s_iwdg.o [1]
+IWDG_init               0x008ce5   0x15  Code  Lc  sys.o [1]
+N720_PwrDown            0x008d4d    0xd  Code  Gb  sys.o [1]
+N720_PwrOn              0x008d40    0xd  Code  Gb  sys.o [1]
+Region$$Table$$Base     0x008c5a          --   Gb  - Linker created -
+Region$$Table$$Limit    0x008c62          --   Gb  - Linker created -
+Sys_init                0x008d21   0x12  Code  Gb  sys.o [1]
+TIM4_Cmd                0x008b2e   0x2f  Code  Gb  stm8s_tim4.o [1]
+TIM4_DeInit             0x008cb5   0x19  Code  Gb  stm8s_tim4.o [1]
+TIM4_ITConfig           0x008800   0x50  Code  Gb  stm8s_tim4.o [1]
+TIM4_TimeBaseInit       0x0087af   0x51  Code  Gb  stm8s_tim4.o [1]
 TIM4_UPD_OVF_IRQHandler
-                        0x008b33   0x38  Code  Gb  sys.o [1]
-TIM_init                0x008d73   0x1a  Code  Lc  sys.o [1]
-UART1_ClearITPendingBit
-                        0x008ba1   0x36  Code  Gb  stm8s_uart1.o [1]
-UART1_Cmd               0x008e0b    0xd  Code  Gb  stm8s_uart1.o [1]
-UART1_DeInit            0x008c92   0x2d  Code  Gb  stm8s_uart1.o [1]
-UART1_ITConfig          0x0086a8   0xd0  Code  Gb  stm8s_uart1.o [1]
+                        0x008a91   0x38  Code  Gb  sys.o [1]
+TIM_init                0x008c9b   0x1a  Code  Lc  sys.o [1]
+UART1_Cmd               0x008d33    0xd  Code  Gb  stm8s_uart1.o [1]
+UART1_DeInit            0x008bba   0x2d  Code  Gb  stm8s_uart1.o [1]
+UART1_ITConfig          0x008688   0xd0  Code  Gb  stm8s_uart1.o [1]
 UART1_Init              0x008080  0x226  Code  Gb  stm8s_uart1.o [1]
-UART1_RX_IRQHandler     0x008778   0x82  Code  Gb  sys.o [1]
-UART1_ReceiveData8      0x008e7d    0x4  Code  Gb  stm8s_uart1.o [1]
-Uart1_init              0x008cbf   0x28  Code  Lc  sys.o [1]
-__DebugBreak            0x008e8f    0x1  Code  Gb  __dbg_break.o [3]
-__exit                  0x008dd2   0x14  Code  Gb  __dbg_xxexit.o [3]
-__iar_data_init2        0x008da6   0x17  Code  Gb  init.o [4]
-__iar_program_start     0x008de6         Code  Gb  cstartup.o [4]
+UART1_RX_IRQHandler     0x008d8f    0x5  Code  Gb  sys.o [1]
+Uart1_init              0x008be7   0x28  Code  Lc  sys.o [1]
+__DebugBreak            0x008db8    0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x008cfa   0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_data_init2        0x008cce   0x17  Code  Gb  init.o [4]
+__iar_program_start     0x008d0e         Code  Gb  cstartup.o [4]
 __iar_unhandled_exception
-                        0x008e8a         Code  Gb  unhandled_exception.o [4]
-__iar_zero_init2        0x008d3a         Code  Gb  init_small.o [4]
+                        0x008db3         Code  Gb  unhandled_exception.o [4]
+__iar_zero_init2        0x008c62         Code  Gb  init_small.o [4]
 __intvec                0x008000         Data  Gb  interrupt.o [4]
-__low_level_init        0x008e84    0x3  Code  Gb  low_level_init.o [4]
-_exit                   0x008e6c         Code  Gb  cexit.o [4]
-_interrupt_20           0x008778         Code  Gb  sys.o [1]
-_interrupt_25           0x008b33         Code  Gb  sys.o [1]
-_interrupt_5            0x008e67         Code  Gb  sys.o [1]
-assert_failed           0x008e8d    0x2  Code  Gb  main.o [1]
-bHeartBeatFlag          0x000122    0x1  Data  Gb  sys.o [1]
-bN720RstFlag            0x000123    0x1  Data  Gb  sys.o [1]
-bPwrDownFlag            0x00011d    0x1  Data  Gb  sys.o [1]
-bPwrOnFlag              0x000124    0x1  Data  Gb  sys.o [1]
-exit                    0x008e87    0x3  Code  Gb  exit.o [4]
-flagpacker              0x00011e    0x1  Data  Gb  sys.o [1]
-length                  0x00011f    0x1  Data  Gb  sys.o [1]
-main                    0x008c64   0x2e  Code  Gb  main.o [1]
+__low_level_init        0x008dad    0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x008d99         Code  Gb  cexit.o [4]
+_interrupt_20           0x008d8f         Code  Gb  sys.o [1]
+_interrupt_25           0x008a91         Code  Gb  sys.o [1]
+_interrupt_5            0x008d94         Code  Gb  sys.o [1]
+assert_failed           0x008db6    0x2  Code  Gb  main.o [1]
+bHeartBeatFlag          0x000015    0x1  Data  Gb  sys.o [1]
+bN720RstFlag            0x000016    0x1  Data  Gb  sys.o [1]
+bPwrDownFlag            0x000014    0x1  Data  Gb  sys.o [1]
+bPwrOnFlag              0x000017    0x1  Data  Gb  sys.o [1]
+exit                    0x008db0    0x3  Code  Gb  exit.o [4]
+main                    0x008b8c   0x2e  Code  Gb  main.o [1]
 
 
 [1] = F:\ÈÙÌ©½¡¿µ\ÍøÂç°å\ÓÐ·½\N720_WDG\project\Debug\Obj
@@ -399,9 +381,9 @@ main                    0x008c64   0x2e  Code  Gb  main.o [1]
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a
 
-  3 150 bytes of readonly  code memory
+  2 935 bytes of readonly  code memory
     578 bytes of readonly  data memory
-    549 bytes of readwrite data memory
+    280 bytes of readwrite data memory
 
 Errors: none
 Warnings: none
